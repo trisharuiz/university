@@ -1,0 +1,70 @@
+/Trisha Esther Ruiz
+/CGS3269 0001
+/Assignment 2
+
+/take inputs
+	Input
+	Store a
+	Output
+
+	Input
+	Store b
+	Output
+
+	Input
+	Store c
+	Output
+
+/verify
+	Load a
+	Skipcond 800
+	Jump OUT
+
+	Load b
+	Skipcond 800
+	Jump OUT
+
+	Load c
+	Skipcond 800
+	Jump OUT
+
+/a * b
+HERE,	Load z
+	Add a
+	Store z
+
+	Load b
+	Subt one
+	Store b
+
+	Skipcond 400
+	Jump HERE
+	
+	Load z
+	Store a
+
+/a * b * c
+HERE2,	Load x
+	Add a
+	Store x
+
+	Load c
+	Subt one
+	Store c
+
+	Skipcond 400
+	Jump HERE2
+
+/outputting z
+OUT,	Load x
+	Output	
+
+	Halt
+
+/initialize variable
+a,	dec 0
+b,	dec 0
+c,	dec 0
+z,	dec 0
+x,	dec 0
+one,	dec 1

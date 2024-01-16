@@ -1,0 +1,77 @@
+/ Trisha Esther Ruiz
+/ (a*b) * (c*d)
+
+	Input
+	Store a
+	Output
+	Input
+	Store b
+	Output
+
+	Input
+	Store c
+	Output
+	Input
+	Store d
+	Output
+
+	Load a
+	Store Temp1
+	Load b
+	Store Temp2
+	JNS MULT
+	Store P1
+	
+	Load c
+	Store Temp1
+	Load d
+	Store Temp2
+	JNS MULT
+	Store P2
+
+	Load P1
+	Store Temp1
+	Load P2
+	Store Temp2
+	JNS MULT
+	Store z
+	Output
+
+	halt
+
+MULT,	hex 000
+	Load zero
+	Store TempResult
+	
+
+LOOP,	Load TempResult
+	Add Temp1
+	Store TempResult
+	
+	Load Temp2
+	Subt one
+	Store Temp2
+
+	Skipcond 400
+	Jump LOOP
+	
+	Load TempResult
+	JumpI MULT
+	
+
+
+
+/initialize variable
+a,	dec 0
+b,	dec 0
+c,	dec 0
+d,	dec 0
+P1,	dec 0
+P2,	dec 0
+z,	dec 0
+Temp1,	dec 0
+Temp2,	dec 0
+TempResult, dec 0
+one,	dec 1
+zero,	dec 0
+	

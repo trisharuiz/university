@@ -1,5 +1,5 @@
-# universit
-projects in university\
+# university
+projects in university
 
 C Projects  |  Algorithms  |  12/10/2020 |  C
 ________________________
